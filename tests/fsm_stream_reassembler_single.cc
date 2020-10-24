@@ -133,6 +133,7 @@ int main() {
 
             test.execute(SubmitSegment{"de", 3}.with_eof(true));
             test.execute(BytesAssembled(5));
+            test.execute(BytesAvailable{"abcde"});
             test.execute(AtEof{});
         }
     } catch (const exception &e) {
